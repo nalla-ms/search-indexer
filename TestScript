@@ -1,0 +1,21 @@
+# seed a few docs
+curl -X POST localhost:8080/api/ingest -H "Content-Type: application/json" -d '{"fileId":"doc-1","type":"ADD","text":"The quick brown fox jumps over the lazy dog"}'
+curl -X POST localhost:8080/api/ingest -H "Content-Type: application/json" -d '{"fileId":"doc-2","type":"ADD","text":"Fast blue hare hops under the energetic dog and outruns the fox"}'
+curl -X POST localhost:8080/api/ingest -H "Content-Type: application/json" -d '{"fileId":"doc-3","type":"ADD","text":"Search systems require freshness low latency and efficiency"}'
+curl -X POST localhost:8080/api/ingest -H "Content-Type: application/json" -d '{"fileId":"doc-2","type":"UPDATE","text":"Blue hare and quick fox appear in modern indexing benchmarks"}'
+
+# search (legacy)
+curl "http://localhost:8080/api/search?q=quick%20fox"
+
+# search (detailed)
+curl "http://localhost:8080/api/search/v2?q=quick%20fox"
+
+# segments
+curl "http://localhost:8080/api/debug/segments"
+
+# merges
+curl -X POST "http://localhost:8080/api/ingest/merge/greedy?maxPick=3"
+curl -X POST "http://localhost:8080/api/ingest/merge/dp?budgetBytes=100000"
+
+# metrics
+curl "http://localhost:8080/ ​:contentReference[oaicite:0]{index=0}​
