@@ -259,9 +259,9 @@ Run all tests:
 ## 👩‍🔬 Contributors
 
 - **Narender Nalla** – Design, Implementation, Metrics Integration, Documentation  
-- **Ian Chen** – Algorithmic Analysis (DP Planner)  
-- **Taylor Reese** – Testing & Evaluation  
-- **Derek Patel** – Progress Reports & Experimentation  
+- **Ian Hopkins** – Algorithmic Analysis (DP Planner)  
+- **Taylor Ling** – Testing & Evaluation  
+- **Derek Wynn** – Progress Reports & Experimentation  
 
 ---
 
