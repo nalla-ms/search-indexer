@@ -220,35 +220,12 @@ curl -s -X POST "localhost:8080/api/ingest/merge/greedy?maxPick=2"
 curl -s "localhost:8080/api/search/v2?q=fox"
 ```
 
----
-
-## 🧪 Testing
-
-JUnit-based tests are under `src/test/java/com/ksu/indexer/`.  
-They validate:
-- Ingest and Search consistency  
-- Merge result equivalence  
-- DP vs. Greedy cost comparison  
-- Tombstone correctness  
-
-Run all tests:
-
-```bash
-./gradlew test
-```
-
----
 
 ## 🧭 Future Work
-
-| Area | Planned Improvement |
-|-------|---------------------|
-| **Merge Planner** | Hybrid model combining Greedy + DP heuristics |
-| **Compression** | Add Frame-of-Reference (FOR) or Delta encoding |
-| **Distributed Mode** | Multi-node shard coordination |
-| **Vector Search** | Integrate FAISS / ChromaDB for hybrid retrieval |
-| **UI Dashboard** | Simple React dashboard for segment inspection |
-| **Benchmark Suite** | Automated trace-based evaluation pipeline |
+**1. Use SQLite instead of H2.
+2. Compute p95/p99 in PromQL
+3. Build a  Grafana dashboard JSON for ingest/search latency (p95/p99) and merge counts.
+4. Adding unit tests.**
 
 ---
 
