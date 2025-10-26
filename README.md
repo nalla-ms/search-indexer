@@ -1,10 +1,10 @@
 # 🔍 Search Indexer (Dynamic Merge-Aware Indexing Engine)
 
 **Version:** 2.0  
-**Author:** Narender Nalla  
+**Author:** Narender Nalla, | Ian Hopkins, Taylor King, Derek Wynn
+
 **Course:** CS 6045 – Advanced Algorithms, Kennesaw State University  
 **Instructor:** Professor Selena He
-
 **Last Updated:** October 2025  
 
 ---
@@ -18,11 +18,7 @@ This version (`v2`) introduces:
 - **Dynamic Programming (DP)** and **Greedy Merge Planners** to optimize merge cost.  
 - **Tombstone and Head filtering** for version consistency.  
 - **Micrometer + Prometheus** integration for performance metrics.  
-- **Bloom filters** and **VarByte compression** for efficient memory and disk use.  
-
-The project can serve as both:
-- A **research prototype** for merge scheduling analysis, and  
-- A **teaching/demo service** for search and indexing systems design.
+- **Bloom filters** and **VarByte compression** for efficient memory and disk use.
 
 ---
 
@@ -121,9 +117,7 @@ Service starts on:
 
 | Endpoint | Method | Description |
 |-----------|--------|--------------|
-| `/api/ingest?fileId=a1&text=hello world` | POST | Add new document |
-| `/api/ingest?fileId=a1&text=updated text` | POST | Update existing document |
-| `/api/ingest/tombstone?fileId=a1` | POST | Logically delete (mark tombstone) |
+| `/api/ingest` | POST | Add new document or Update existing document
 | `/api/ingest/load?docs=100` | POST | Load synthetic test data |
 
 ---
@@ -257,21 +251,4 @@ Run all tests:
 
 ---
 
-## 👩‍🔬 Contributors
-
-- **Narender Nalla** – Design, Implementation, Metrics Integration, Documentation  
-- **Ian Hopkins** – Algorithmic Analysis (DP Planner)  
-- **Taylor Ling** – Testing & Evaluation  
-- **Derek Wynn** – Progress Reports & Experimentation  
-
----
-
-## 🧾 License
-
-This project is provided for academic and research use under the **MIT License**.  
-You may reuse the architecture and merge scheduling ideas with attribution.
-
----
-
 > 💬 *“Search optimization isn’t just about results — it’s about when and how you merge what you already know.”*
-# search-indexer

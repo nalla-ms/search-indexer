@@ -1,0 +1,16 @@
+
+### Ingest a document
+POST http://localhost:8080/api/ingest
+Content-Type: application/json
+
+{
+  "fileId": "doc-1",
+  "type": "ADD",
+  "text": "The quick brown fox jumps over the lazy dog"
+}
+
+### Search
+GET http://localhost:8080/api/search?q=quick%20fox
+
+### Merge with DP (50 KB budget approx units)
+POST http://localhost:8080/api/ingest/merge/dp?budgetBytes=50000

@@ -1,0 +1,31 @@
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:file:./manifestdb;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jdbc:
+    template:
+      fetch-size: 1000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus,metrics
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    distribution:
+      percentiles-histogram:
+        all: true
+      slo:
+        index.search.latency: 50ms,100ms,250ms,500ms,1s,2s,5s
+#        index:
+#          ingest_visible: true
+#          search_latency: true
+
