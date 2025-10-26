@@ -222,10 +222,11 @@ curl -s "localhost:8080/api/search/v2?q=fox"
 
 
 ## 🧭 Future Work
-** 1. Use SQLite instead of H2 **
-**2. Compute p95/p99 in PromQL **
-** 3. Build a  Grafana dashboard JSON for ingest/search latency (p95/p99) and merge counts.**
-** 4. Adding unit tests. **
+```bash
+ 1. Use SQLite instead of H2
+ 2. Compute p95/p99 in PromQL
+ 3. Build a  Grafana dashboard JSON for ingest/search latency (p95/p99) and merge counts.
+ 4. Adding unit tests.
 
 ---
 
