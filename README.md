@@ -5,6 +5,7 @@
 
 **Course:** CS 6045 – Advanced Algorithms, Kennesaw State University  
 **Instructor:** Professor Selena He
+
 **Last Updated:** October 2025  
 
 ---
