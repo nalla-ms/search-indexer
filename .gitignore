@@ -1,0 +1,6 @@
+/.gradle/
+/build/
+/segments/
+/manifestdb.*
+/manifest.db
+target/, .idea/, *.iml, out/
