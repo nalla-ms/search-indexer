@@ -121,8 +121,8 @@ Service starts on:
 
 | Endpoint | Method | Description |
 |-----------|--------|--------------|
-| `/api/ingest/add?fileId=a1&text=hello world` | POST | Add new document |
-| `/api/ingest/update?fileId=a1&text=updated text` | POST | Update existing document |
+| `/api/ingest?fileId=a1&text=hello world` | POST | Add new document |
+| `/api/ingest?fileId=a1&text=updated text` | POST | Update existing document |
 | `/api/ingest/tombstone?fileId=a1` | POST | Logically delete (mark tombstone) |
 | `/api/ingest/load?docs=100` | POST | Load synthetic test data |
 
