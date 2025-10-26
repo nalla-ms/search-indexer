@@ -3,7 +3,8 @@
 **Version:** 2.0  
 **Author:** Narender Nalla  
 **Course:** CS 6045 – Advanced Algorithms, Kennesaw State University  
-**Instructor:** Dr. Selena He
+**Instructor:** Professor Selena He
+
 **Last Updated:** October 2025  
 
 ---
